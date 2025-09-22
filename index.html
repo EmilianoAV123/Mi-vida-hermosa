@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Mi Niña Bonita</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #ffe0b2;
+            overflow: hidden;
+            position: relative;
+            font-family: 'Dancing Script', cursive;
+            color: #8b4513;
+            text-align: center;
+        }
+
+        .container {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h1 {
+            font-size: 5em;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+            margin-bottom: 20px;
+            animation: fadeInText 3s ease-out forwards;
+        }
+        
+        .message-line {
+            /* Aumentado de 2em a 3em */
+            font-size: 3em; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+            margin: 5px 0;
+            opacity: 0;
+            animation: fadeInMessage 2s ease-out forwards;
+        }
+
+        .message-line.line1 {
+            /* Aumentado de 1.5em a 2em */
+            font-size: 2em; 
+            animation-delay: 2s;
+        }
+        
+        .message-line.line2 {
+            animation-delay: 3.5s;
+        }
+
+        .my-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 5px solid #ffcc80;
+            box-shadow: 0px 5px 15px rgba(0,0,0,0.3);
+            margin-top: 30px;
+            opacity: 0;
+            transform: scale(0.8);
+            animation: fadeInPhoto 2s ease-out forwards;
+            animation-delay: 5s;
+        }
+
+        @keyframes fadeInText {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInMessage {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInPhoto {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .sunflower-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            opacity: 0.7;
+            z-index: 0;
+            animation: zoomInImage 5s ease-out forwards;
+        }
+
+        @keyframes zoomInImage {
+            from { transform: scale(1.1); opacity: 0.5; }
+            to { transform: scale(1); opacity: 0.7; }
+        }
+    </style>
+</head>
+<body>
+    <div class="sunflower-background" style="background-image: url('https://i.imgur.com/SH3lwX2.png');"></div>
+    <div class="container">
+        <h1>Te amo niña bonita</h1>
+        <p class="message-line line1">Mientras esté contigo, jamás serás espectadora</p>
+        <p class="message-line line2">ERES EL ADMV, TE ADORO 🥺♥️</p>
+        <img src="https://i.imgur.com/6f85tf9.png" alt="Mi Foto" class="my-photo">
+    </div>
+</body>
+</html>
